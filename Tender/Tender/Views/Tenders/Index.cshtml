@@ -1,0 +1,86 @@
+﻿@model List<Tender.Models.TenderModel>
+@{
+    ViewBag.Title = "Tender List";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Tender List</h2>
+
+            <div class="form-group card">
+                <div class="card-body">
+                    @foreach (var filter in Session["Filters"] as List<Tender.Models.Filter>)
+                    {
+                        @Html.Label((string)filter.Name)
+
+                        foreach (var selection in filter.filterList)
+                        {
+                            <div class="form-check">
+                                @Html.Hidden((string)selection.Key)
+                                @Html.CheckBox(selection.Key, selection.Value, new { @class = "form-check-input checkbox" })
+                                @Html.Label(selection.Key, selection.Key)
+                            </div>
+                        }
+
+                    }
+                </div>
+            </div>
+            <div class="form-group card">
+                <div class="card-body">
+                    <p>Publish date</p>
+                    <div class="row">
+                        <div class="col-lg-2">@Html.Label("startDate", "From")</div>
+                        <div class="col-lg-8"><input name="startDate" class="datepicker"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-2">@Html.Label("finishDate", "To")</div>
+                        <div class="col-lg-8"><input name="finishDate" class="datepicker"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @****************************************************************************************************************************************@
+        <div class=" col-md-8">
+
+            <nav class="navbar navbar-light bg-light">
+                <h5 class="navbar-brand">IT ENTERPRICE</h5>
+                @using (Ajax.BeginForm("Indexx", "Tenders", "", new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "resultBlock" }, new { @class = "form-inline" }))
+                {
+                    <input id="searchTextArea" class="form-control mr-sm-2" name="word" type="search" placeholder="Search" aria-label="Search" value="@Session["searchWord"]">
+                    <button id="submit" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                }
+            </nav>
+            <hr />
+            <div class="form-group">
+                @using (Ajax.BeginForm("Indexx", "Tenders", "", new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "resultBlock" }, new { id = "formSorting" }))
+                {
+                    @Html.Hidden("sortOrder", ViewBag.SortBy as string)
+                    @Html.Label("sortList", "Sort by")
+                    @Html.DropDownList("sortList", Session["sortList"] as IEnumerable<SelectListItem>, new { @class = "form-control" })
+                }
+            </div>
+            <hr />
+            <div class="row" id="resultBlock">
+                @Html.Partial("DisplayPost", Model)
+            </div>
+            
+                @using (Ajax.BeginForm("Indexx", "Tenders", "", new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "resultBlock" }, new { id = "formPagination" }))
+                {
+                    @Html.Hidden("CurrentPage", ViewBag.CurrentPage as string)
+                    @Html.Hidden("LastPage", ViewBag.LastPage as string)
+                }
+
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <input class="btn btn-primary" type="button" id="Previous" value="Previous" />
+                    </li>
+
+                    <li class="page-item">
+                        <input class="btn btn-primary" type="button" id="Next" value="Next" />
+                    </li>
+                </ul>
+
+        </div>
+    </div>
+</div>

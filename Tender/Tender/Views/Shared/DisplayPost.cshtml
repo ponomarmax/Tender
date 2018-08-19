@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Tender.Models.TenderModel>
+
+@foreach (var item in Model)
+{
+    <div class="card col-md-5">
+        <div class="card-body">
+            <h5 class="card-text">№ @item.Id</h5>
+            <p class="card-text">@Html.ActionLink(item.Name, "Details", new { id = item.Id })</p>
+            <p class="card-text"><small class="text-muted">@item.Organisator</small></p>
+        </div>
+    </div>
+    <div class="card col-md-3">
+        <div class="card-body">
+            <p class="card-text"><small class="text-muted">Start budget:  </small>@item.StartBudget    </p>
+            <p class="card-text"><small class="text-muted">Currency:  </small> @item.Currency</p>
+        </div>
+    </div>
+    <div class="card col-md-4">
+        <div class="card-body">
+            <p class="card-text"><h5>Propose period </h5> @item.GetProposeFromDate.ToShortDateString() - @item.GetProposeToDate.ToShortDateString() </p>
+            <p class="card-text"><small class="text-muted">Publish date @item.PublishDate.ToShortDateString() </small></p>
+        </div>
+    </div>
+}

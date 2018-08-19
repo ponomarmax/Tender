@@ -1,0 +1,9 @@
+C:\Users\User\Downloads\Tender\Tender\Tender.DLL\obj\Debug\netstandard2.0\Tender.DAL.csprojResolveAssemblyReference.cache
+C:\Users\User\Downloads\Tender\Tender\Tender.DLL\obj\Debug\netstandard2.0\Tender.DAL.csproj.CoreCompileInputs.cache
+C:\Users\User\Downloads\Tender\Tender\Tender.DLL\obj\Debug\netstandard2.0\Tender.DAL.AssemblyInfoInputs.cache
+C:\Users\User\Downloads\Tender\Tender\Tender.DLL\obj\Debug\netstandard2.0\Tender.DAL.AssemblyInfo.cs
+C:\Users\User\Downloads\Tender\Tender\Tender.DLL\bin\Debug\netstandard2.0\Tender.DAL.deps.json
+C:\Users\User\Downloads\Tender\Tender\Tender.DLL\bin\Debug\netstandard2.0\Tender.DAL.dll
+C:\Users\User\Downloads\Tender\Tender\Tender.DLL\bin\Debug\netstandard2.0\Tender.DAL.pdb
+C:\Users\User\Downloads\Tender\Tender\Tender.DLL\obj\Debug\netstandard2.0\Tender.DAL.dll
+C:\Users\User\Downloads\Tender\Tender\Tender.DLL\obj\Debug\netstandard2.0\Tender.DAL.pdb

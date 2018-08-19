@@ -1,0 +1,12 @@
+C:\Users\User\Downloads\Tender\Tender\TenderDAL\bin\Debug\TenderDAL.dll.config
+C:\Users\User\Downloads\Tender\Tender\TenderDAL\bin\Debug\TenderDAL.dll
+C:\Users\User\Downloads\Tender\Tender\TenderDAL\bin\Debug\TenderDAL.pdb
+C:\Users\User\Downloads\Tender\Tender\TenderDAL\bin\Debug\EntityFramework.dll
+C:\Users\User\Downloads\Tender\Tender\TenderDAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Downloads\Tender\Tender\TenderDAL\bin\Debug\EntityFramework.xml
+C:\Users\User\Downloads\Tender\Tender\TenderDAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Downloads\Tender\Tender\TenderDAL\obj\Debug\TenderDAL.csprojResolveAssemblyReference.cache
+C:\Users\User\Downloads\Tender\Tender\TenderDAL\obj\Debug\TenderDAL.csproj.CoreCompileInputs.cache
+C:\Users\User\Downloads\Tender\Tender\TenderDAL\obj\Debug\TenderDAL.csproj.CopyComplete
+C:\Users\User\Downloads\Tender\Tender\TenderDAL\obj\Debug\TenderDAL.dll
+C:\Users\User\Downloads\Tender\Tender\TenderDAL\obj\Debug\TenderDAL.pdb

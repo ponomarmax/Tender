@@ -1,0 +1,43 @@
+﻿@model Tender.Models.TenderModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h4>Tender</h4>
+<hr />
+<div class="container">
+    <div class="row">
+        <div class="card col-lg-8">
+
+            <h5 class="card-text">№ @Model.Id</h5>
+
+            <p class="card-text"><h5>Product subject </h5>@Model.Name</p>
+            <p class="card-text"><h5>Description </h5>@Model.Description</p>
+            <p class="card-text"><h5>Tender kind </h5> @Model.TenderKind</p>
+            <p class="card-text"><h5>Classiffication (Activity kind) </h5> @Model.Classification</p>
+
+        </div>
+        <div class="card col-lg-4">
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading"><small>Status:</small> Active</h4>
+            </div>
+            <p class="card-text"><h5>Start budget </h5> @Model.StartBudget @Model.Currency</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card col-lg-12 ">
+            <p class="card-text"><h5>Organisator </h5> @Model.Organisator</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="card col-lg-12 ">
+            <p class="card-text"><h5>Publish date</h5>  @Model.PublishDate.ToShortDateString()</p>
+            <p class="card-text"><h5>Propose period </h5> @Model.GetProposeFromDate.ToShortDateString() - @Model.GetProposeToDate.ToShortDateString() </p>
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
